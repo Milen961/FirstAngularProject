@@ -1,9 +1,9 @@
 <!-- theme component  -->
-<div class="theme-container">
+<div *ngFor="let theme of themeList" class="theme-container">
     <div class="theme-name-wrapper">
         <div class="theme-name">
             <a href="#" class="normal">
-                <h2>Angular 10</h2>
+                <h2>{{theme.themeName}}</h2>
             </a>
             <div class="columns">
                 <div>
