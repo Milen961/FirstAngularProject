@@ -1,5 +1,4 @@
-export interface IUser{
-
+export interface IUser {
     themes: string[];
     posts: string[];
     _id: string;
@@ -10,5 +9,5 @@ export interface IUser{
     created_at: string;
     updatedAt: string;
     __v: number;
-
-}
+  }
+  

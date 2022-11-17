@@ -10,6 +10,7 @@ import { IPost } from '../interfaces/post';
 export class RecentPostsComponent implements OnInit {
 
   posts: IPost[] | null = null;
+  errorFetcingData = false;
 
   constructor(private apiService: ApiService) { }
 
@@ -17,11 +18,11 @@ export class RecentPostsComponent implements OnInit {
     this.apiService.loadPosts(5).subscribe({
       next: (value) => {
         this.posts = value;
-
       },
       error: (err) => {
-        console.log(err);
+        this.errorFetcingData = true;
+        console.error(err);
       }
-    });
+    })
   }
-    }
+}

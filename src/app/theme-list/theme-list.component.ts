@@ -10,16 +10,18 @@ import { ITheme } from '../interfaces/theme';
 export class ThemeListComponent implements OnInit {
 
   themeList: ITheme[] | null = null;
+  errorFetcingData = false;
 
   constructor(private apiService: ApiService) { }
 
   ngOnInit(): void {
     this.apiService.loadThemes().subscribe({
       next: (value) => {
-       this.themeList = value
+        this.themeList = value;
       },
       error: (err) => {
-        console.log(err)
+        this.errorFetcingData = true;
+        console.error(err);
       }
     });
   }
