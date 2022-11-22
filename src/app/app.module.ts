@@ -8,13 +8,17 @@ import { RecentPostsComponent } from './recent-posts/recent-posts.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MainComponent } from './main/main.component';
 import { SharedModule } from './shared/shared.module';
+import { LoginComponent } from './auth/login/login.component';
+import { RegisterComponent } from './auth/register/register.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ThemeListComponent,
     RecentPostsComponent,
-    MainComponent
+    MainComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
