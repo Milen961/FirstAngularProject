@@ -8,23 +8,25 @@ import { RecentPostsComponent } from './recent-posts/recent-posts.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MainComponent } from './main/main.component';
 import { SharedModule } from './shared/shared.module';
-import { LoginComponent } from './auth/login/login.component';
-import { RegisterComponent } from './auth/register/register.component';
+import { AppRoutingModule } from './app-routing.module';
+import { AuthModule } from './auth/auth.module';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     ThemeListComponent,
     RecentPostsComponent,
-    MainComponent,
-    LoginComponent,
-    RegisterComponent
+    MainComponent
+    
   ],
   imports: [
+    AppRoutingModule,
     BrowserModule,
     CoreModule,
     HttpClientModule,
-    SharedModule
+    SharedModule,
+    AuthModule,
     
   ],
   providers: [],
