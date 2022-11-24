@@ -1,14 +1,14 @@
 import { Injectable } from '@angular/core';
-import { IUser} from '../shared/interfaces'
+import { IUser } from '../shared/interfaces';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-  user: IUser | null = null
+  user: IUser | null = null;
 
-  get isLoggedIn(){
+  get isLoggedIn() {
     return this.user !== null;
   }
 

@@ -8,7 +8,6 @@ import { ProfileComponent } from './profile/profile.component';
 
 
 
-
 @NgModule({
   declarations: [
     LoginComponent,
@@ -19,7 +18,6 @@ import { ProfileComponent } from './profile/profile.component';
   imports: [
     CommonModule,
     AuthRoutingModule
-    
   ]
 })
 export class AuthModule { }
