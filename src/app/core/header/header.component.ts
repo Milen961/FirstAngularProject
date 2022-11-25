@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Optional } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/auth/auth.service';
 
@@ -7,15 +7,16 @@ import { AuthService } from 'src/app/auth/auth.service';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent  {
+export class HeaderComponent {
 
- get isLoggedIn(){
-  return this.authService.isLoggedIn
- }
+  get isLoggedIn() {
+    return this.authService.isLoggedIn;
+  }
 
-  get user(){
-    return this.authService.user
+  get user() {
+    return this.authService.user;
   }
 
   constructor(private authService: AuthService, private router: Router) { }
+
 }
