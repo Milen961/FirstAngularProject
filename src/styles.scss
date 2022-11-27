@@ -76,60 +76,62 @@ blockquote p.author {
 }
 
 body {
-    margin: 0;
+  margin: 0;
+}
+
+.site {
+    max-width: 50em;
+    margin: 0 auto;
+}
+
+table {
+    border: 1px solid #CCC;
+    width: 100%;
+    border-spacing: 0.2em;
+    margin-bottom: 1.5em;
+}
+
+table td,
+table th {
+    border: 1px solid #CCC;
+    padding: 0.4em 0.8em;
+}
+
+table td {
+    background: #EEE;
+}
+
+table thead th,
+table tfoot td {
+    font-weight: bold;
+    text-align: left;
+    background: #000;
+    color: #FFF;
+}
+
+table tbody tr:nth-child(even) td {
+    background: #CCC;
+}
+
+@media (min-width: 800px) {
+    html {
+        font-size: 14px;
     }
-    
-    .site {
-        max-width: 50em;
-        margin: 0 auto;
+}
+
+@media (min-width: 1024px) {
+    html {
+        font-size: 16px;
     }
-    
-    table {
-        border: 1px solid #CCC;
-        width: 100%;
-        border-spacing: 0.2em;
-        margin-bottom: 1.5em;
+}
+
+@media (min-width: 1280px) {
+    html {
+        font-size: 18px;
     }
-    
-    table td,
-    table th {
-        border: 1px solid #CCC;
-        padding: 0.4em 0.8em;
-    }
-    
-    table td {
-        background: #EEE;
-    }
-    
-    table thead th,
-    table tfoot td {
-        font-weight: bold;
-        text-align: left;
-        background: #000;
-        color: #FFF;
-    }
-    
-    table tbody tr:nth-child(even) td {
-        background: #CCC;
-    }
-    @media (min-width: 800px) {
-        html {
-            font-size: 14px;
-        }
-    }
-    
-    @media (min-width: 1024px) {
-        html {
-            font-size: 16px;
-        }
-    }
-    
-    @media (min-width: 1280px) {
-        html {
-            font-size: 18px;
-        }
-    }
-    /*
+}
+
+/*
 *Removes all default whitespace
 */
 
@@ -149,12 +151,14 @@ html {
 *, *:before, *:after {
     box-sizing: inherit;
 }
+
 body {
     max-width: 1366px;
     margin: auto;
     position: relative;
     min-height: 100vh;
 }
+
 h2 {
     text-align: center;
     border-bottom: 1px dashed #999;
