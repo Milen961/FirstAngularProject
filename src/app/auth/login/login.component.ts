@@ -1,6 +1,7 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { appEmailDomains } from 'src/app/shared/constanrs';
 import { AuthService } from '../auth.service';
 
 @Component({
@@ -10,6 +11,8 @@ import { AuthService } from '../auth.service';
 })
 export class LoginComponent {
 
+  appEmailDomains = appEmailDomains
+   
   @ViewChild (
     NgForm,
     {static:true}
