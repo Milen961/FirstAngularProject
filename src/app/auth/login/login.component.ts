@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AuthService } from '../auth.service';
 
@@ -13,13 +14,13 @@ export class LoginComponent {
 
   }
 
-  loginHandler(): void {
-    this.authServie.user = {
-      username: 'John'
-    } as any;
+  loginHandler(form : NgForm): void {
+    // this.authServie.user = {
+    //   username: 'John'
+    // } as any;
 
-    const returnUrl = this.activatedRoute.snapshot.queryParams['returnUrl'] || '/';
+    // const returnUrl = this.activatedRoute.snapshot.queryParams['returnUrl'] || '/';
 
-    this.router.navigate([returnUrl]);
+    // this.router.navigate([returnUrl]);
   }
 }
